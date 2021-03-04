@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Exo</h1>
+
+<script>
+
+let suspectInfo = {'James': ['Jacob', 'Bill', 'Lucas'],
+ 'Johnny': ['David', 'Kyle', 'Lucas'],
+ 'Peter': ['Lucy', 'Kyle']}
+ let dead = ['Lucas', 'Bill']
+
+// for(var i in suspectInfo){
+//   console.log(i);
+//   console.log(suspectInfo[i]); //alerts key's value
+// }
+
+let suspectJames = suspectInfo[‘James’];
+let result = [];
+for (let index=0; index<suspectJames.length; index++){
+    for (let i=0; i<dead.length; i++) {
+        if( suspectJames[index] == dead[i]) {
+            result.push(dead[i]);
+        }
+    }
+}
+console.log(result);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Exo 'Who is the killer?</h1>
+
+<script>
+
+let suspectInfo = {'James': ['Jacob', 'Bill', 'Lucas'],
+ 'Johnny': ['David', 'Kyle', 'Lucas'],
+ 'Peter': ['Lucy', 'Kyle']}
+let dead = ['Lucas', 'Bill']
+
+function killer(suspectInfo, dead) {
+  for (const [key, value] of Object.entries(suspectInfo)){
+    if(dead.every((deadElement)=>value.includes(deadElement))){
+      return key
+    }
+    }
+  }
+}
+
+console.log(killer(suspectInfo, dead))
+
+</script>
+</body>
+</html>

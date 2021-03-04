@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Exo 'Who is the killer?</h1>
+
+<script>
+
+let obj = {'James': ['Jacob', 'Bill', 'Lucas'],
+ 'Johnny': ['David', 'Kyle', 'Lucas'],
+ 'Peter': ['Lucy', 'Kyle']}
+let arr = ['Lucas', 'Bill']
+
+function killer(obj, arr) {
+for (let key in obj){
+  let same = 0;
+  for(let i = 0;i<arr.length;i++){
+    if(obj[key].includes(arr[i])){
+      same++
+    }
+     if(same === arr.length){
+       return key
+     }
+  }
+}
+}
+
+console.log(killer(obj, arr))
+
+</script>
+</body>
+</html>
